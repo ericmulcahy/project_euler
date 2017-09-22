@@ -15,4 +15,13 @@ public class Utils {
         }
         return true;
     }
+
+    public static boolean isPalindrome(Long num) {
+        if (num == null) return false;
+        char[] chars = String.valueOf(num).toCharArray();
+        for (int i = 0; i < chars.length / 2; i++) {
+            if (chars[i] != chars[chars.length - i - 1]) return false;
+        }
+        return true;
+    }
 }
